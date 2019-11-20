@@ -17,6 +17,7 @@ if [ ! -d "$HOME/.config/gcloud" ]; then
 
    gcloud auth activate-service-account --key-file=/tmp/account.json
    gcloud config set project "$PROJECT_ID"
+   gcloud components install beta
 fi
 
 echo ::add-path::/google-cloud-sdk/bin/gcloud
