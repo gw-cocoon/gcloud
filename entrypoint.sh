@@ -58,8 +58,8 @@ fi
 
 gcloud components install beta
 
-echo ::add-path::/google-cloud-sdk/bin/gcloud
-echo ::add-path::/google-cloud-sdk/bin/gsutil
+echo "/google-cloud-sdk/bin/gcloud" >> $GITHUB_PATH
+echo "/google-cloud-sdk/bin/gsutil" >> $GITHUB_PATH
 
 command="gcloud"
 if [ "$CLI" = "gsutil" ] || [ "$INPUT_CLI" = "gsutil" ]; then
